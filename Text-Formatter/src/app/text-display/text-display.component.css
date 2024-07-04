@@ -1,0 +1,11 @@
+.text-display{
+    background-color: rgba(174, 172, 172, 0.855);
+    margin: 30px;
+    flex-direction: column;
+    width: 100%;
+}
+.form-control{
+    margin: 20px;
+    width: 90%;
+    height: 100px;
+}

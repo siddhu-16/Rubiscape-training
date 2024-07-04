@@ -1,0 +1,29 @@
+.container-fluid{
+    background-color: rgba(174, 172, 172, 0.855);
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    width: 100%;
+}
+.count{
+    background-color: rgba(102, 100, 100, 0.855);
+    margin: 20px;
+    padding: 20px;
+    color: white;
+}
+.btn-group{
+    background-color: rgba(169, 168, 168, 0.855);
+    margin: 20px;
+    padding: 20px;
+}
+.btn{
+    width: 45%;
+    margin: 5px;
+}
+
+.icons{
+    width: 100%;
+    font-size: 20px ;
+    margin: 5px;
+   
+}
