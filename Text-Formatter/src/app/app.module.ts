@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { RemoveSpecialCharPipe } from './Pipes/remove-special-char.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    
+    RemoveSpecialCharPipe
   ],
   imports: [
     BrowserModule,
