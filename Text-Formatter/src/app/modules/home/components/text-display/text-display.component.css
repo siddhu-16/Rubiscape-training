@@ -6,6 +6,12 @@
 }
 .form-control{
     margin: 20px;
-    width: 90%;
+    width: 95%;
+    height: 100px;
+}
+.display{
+    width: 100;
+    background-color: white;
+    margin: 20px;
     height: 100px;
 }

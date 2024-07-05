@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-text-display',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./text-display.component.css']
 })
 export class TextDisplayComponent implements OnInit {
+  text1 :string = ''
+  constructor(private sharedService : SharedService) { }
 
-  constructor() { }
-
+  onChange(){
+     this.sharedService.setInputData(this.text1);
+  }
   ngOnInit(): void {
   }
 

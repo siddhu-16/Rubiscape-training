@@ -1,10 +1,12 @@
 <div class="text-display ">
     <div class="form-floating">
-        <input type="text" class="form-control" id="floatingInput" placeholder="Type Text:-">
-
+        <!-- <input type="text" [(ngModel)] = "text1" class="form-control" id="floatingInput" (input)="onChange()" placeholder="Type Text:-"> -->
+        <textarea [(ngModel)] = "text1" class="form-control" id="floatingInput" (input)="onChange()" placeholder="Type Text:-"></textarea>
     </div>
-    <div class="form-floating">
-        <input type="text" class="form-control" id="floatingInput" placeholder="Output Text:-"> 
+    <div class="display">
+        <div>
+            {{text1}}
+        </div>
     </div>
 
 </div>
