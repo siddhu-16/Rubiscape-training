@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  btn_clicked : any;
 
+  constructor() { }
+  
+  updateData(btn_id:any){
+    this.btn_clicked = btn_id;
+  }
+  
   ngOnInit(): void {
   }
 

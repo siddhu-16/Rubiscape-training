@@ -2,22 +2,21 @@
     <div class="count d-flex flex-column ">
         <div>Word Count: {{wordCount}} words</div>
         <div>Char Count: {{charCount}} chars</div>
-
     </div>
     <div class="btn-group d-flex flex-column ">
         <div class="d-flex ">
             <div class="row">
                 <div class="col">
-                    <button type="button" class="btn btn-secondary">Clear All</button>
-                    <button type="button" class="btn btn-secondary">White-Space Remover</button>
+                    <button type="button" id="clrbtn" class="btn btn-secondary" (click) ="getId($event)">Clear All</button>
+                    <button type="button " id ="spaceRemove" class="btn btn-secondary" (click) ="getId($event)">White-Space Remover</button>
                 </div>
                 <div class="col">
-                    <button type="button" class="btn btn-secondary">Reverse All</button>
-                    <button type="button" class="btn btn-secondary">Remove Special Char</button>
+                    <button type="button" id="reverse" class="btn btn-secondary" (click) ="getId($event)">Reverse All</button>
+                    <button type="button" id="removeSpclChar" class="btn btn-secondary" (click) ="getId($event)">Remove Special Char</button>
                 </div>
                 <div class="col">
-                    <button type="button" class="btn btn-secondary">Remove styling</button>
-                    <button type="button " class="btn btn-secondary">Capitalize Word</button>
+                    <button type="button" id="removeStyle" class="btn btn-secondary" (click) ="getId($event)">Remove styling</button>
+                    <button type="button " id="capital" class="btn btn-secondary" (click) ="getId($event)">Capitalize Word</button>
                 </div>
             </div>
             <div class="icons d-flex justify-content-around">

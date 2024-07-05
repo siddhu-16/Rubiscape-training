@@ -10,9 +10,9 @@
 
   <div class="container-fluid">
     
-      <app-text-display class="left"></app-text-display>
+      <app-text-display [item] = "btn_clicked" class="left"></app-text-display>
     
-      <app-formatters class="right"></app-formatters>
+      <app-formatters class="right" (updateDataEvent) = "updateData($event)"></app-formatters>
     
   </div>
 
