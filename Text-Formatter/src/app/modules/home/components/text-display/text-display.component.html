@@ -4,7 +4,7 @@
         <textarea [(ngModel)] = "text1" class="form-control" id="floatingInput" (input)="onChange()" placeholder="Type Text:-"></textarea>
     </div>
     <div class="display">
-        <div>
+        <div [ngStyle]="currentStyles">
             {{text2}}
            
         </div>
@@ -12,5 +12,5 @@
 
     </div>
 
-    {{item}}
+
 </div>

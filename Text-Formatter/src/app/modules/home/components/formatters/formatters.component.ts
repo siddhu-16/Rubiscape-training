@@ -27,7 +27,10 @@ export class FormattersComponent implements OnInit {
 
 
   getId(event : any){
+
     this.btn = event.target.id;
     this.updateDataEvent.emit(this.btn);
+    
+    console.log(this.btn)
   }
 }
