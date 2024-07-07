@@ -1,0 +1,66 @@
+.formtitle{
+    font-weight: bold;
+  }
+  
+  form{
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    
+  }
+  .one{
+    width: 50%;
+  }
+  .two{
+    /* text-center fs-3 formtitle */
+    font-size: medium;
+
+  }
+  .form{
+    border: black 2px solid;
+  }
+  .three{
+    margin-bottom: 30px;
+  }
+  .text-danger{
+    color: red;
+  }
+  .four{
+    text-align: center;
+  }
+  .form-control{
+    width: 100%;
+    padding: 5px;
+  }
+  .five{
+    /* justify-content-center text-align-center row */
+    justify-content: center;
+    text-align: center;
+    display: block;
+    
+  }
+  .btn{
+    width: 40%;
+    padding: 5px;
+    background-color: green;
+    color: white;
+    margin: 5px;
+  }
+  .six{
+    /* border border-black rounded p-4 col-12 w-50 */
+    border: black 2px solid ;
+    padding: 4px;
+
+  }
+  .seven{
+    /* w-50 m-auto my-2 */
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .eight{
+    margin-top: 20px;
+  }
