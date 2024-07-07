@@ -1,0 +1,21 @@
+
+
+<nav class="navbar ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home">Text Formatted</a>
+    </div>
+</nav>
+
+
+
+  <div class="container-fluid">
+    
+      <app-text-display [item] = "btn_clicked" class="left"></app-text-display>
+    
+      <app-formatters class="right" (updateDataEvent) = "updateData($event)"></app-formatters>
+    
+  </div>
+
+
+
+
