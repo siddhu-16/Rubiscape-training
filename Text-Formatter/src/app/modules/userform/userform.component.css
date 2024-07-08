@@ -1,0 +1,65 @@
+.formtitle{
+    font-weight: bold;
+  }
+  
+  form{
+    border: black 2px solid;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .one{
+    width: 50%;
+  }
+  .two{
+    /* text-center fs-3 formtitle */
+    font-size: medium;
+
+  }
+
+  .three{
+    margin-bottom: 30px;
+  }
+  .text-danger{
+    color: red;
+  }
+  .four{
+    text-align: center;
+  }
+  .form-control{
+    width: 100%;
+    padding: 5px;
+  }
+
+  .btn{
+    width: 40%;
+    padding: 5px;
+    background-color: green;
+    color: white;
+    margin: 5px;
+  }
+  .six{
+    /* border border-black rounded p-4 col-12 w-50 */
+   
+ 
+   
+    display: flex;
+    border: black 2px solid ;
+    padding: 4px;
+    width: 50%;
+
+  }
+  .seven{
+    /* w-50 m-auto my-2 */
+    font-size: large;
+text-align: center;
+    margin-top: 20px;
+  }
+  .eight{
+    margin-top: 20px;
+    
+  }

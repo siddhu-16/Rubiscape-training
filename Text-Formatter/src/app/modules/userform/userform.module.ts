@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { UserformRoutingModule } from './userform-routing.module';
 import { UserformComponent } from './userform.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { UserformComponent } from './userform.component';
   ],
   imports: [
     CommonModule,
-    UserformRoutingModule
+    UserformRoutingModule,
+    ReactiveFormsModule   
   ]
 })
 export class UserformModule { }
