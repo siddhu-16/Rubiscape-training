@@ -1,16 +1,17 @@
 <div class="container">
-
     <div class="row">
-        <div class="col right border">
+        <div class="col right">
              <div class="user-input">
                 <label for="user">User id:-</label>
-                <input class="input" type="text" placeholder="">
+                <input [(ngModel)] = "id" class="input" type="text" placeholder="" (input)="setId()">
+                <!-- <textarea [(ngModel)] = "id" class="form-control" id="floatingInput" (input)="setId()" placeholder="Type Text:-"></textarea> -->
+
              </div>
              <div class="btn-grid">
-                <button class="btn">Comments</button>
-                <button class="btn">Albums</button>
-                <button class="btn">Photos</button>
-                <button class="btn">Todos</button>
+                <button id="comments" class="btn" (click)="setbtn($event)" >Comments</button>
+                <button id="albums" class="btn" (click)="setbtn($event)">Albums</button>
+                <button id="photos" class="btn" (click)="setbtn($event)">Photos</button>
+                <button id="todos" class="btn" (click)="setbtn($event)">Todos</button>
              </div>
              <div class="btn-g">
                 <button class="btn-1">Delete</button>
@@ -22,16 +23,67 @@
                 <input class="input" type="text" placeholder="">
              </div>
         </div>
-        <div class="col left border">
+        <div class="col left">
             <div>
                 <div class="error">
                     Error Msg
                 </div>
                 <div class="responce">
-                    Responce Data
+                    Responce Data:
+                    <div *ngIf="btn == 'comments'">
+                        <div>
+                            <table *ngFor="let i of info | keyvalue">
+                                <tr>
+                                    <td>{{i.key}} </td>
+                                </tr>
+                                <tr>
+                                    <td>{{i.value}}</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div *ngIf="btn == 'albums'">
+                        <div>
+                            <table *ngFor="let i of info | keyvalue">
+                                <tr>
+                                    <td>{{i.key}} </td>
+                                </tr>
+                                <tr>
+                                    <td>{{i.value}}</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div *ngIf="btn == 'photos'">
+                        <div>
+                            <table *ngFor="let i of info | keyvalue">
+                                <tr>
+                                    <td>{{i.key}} </td>
+                                </tr>
+                                <tr>
+                                    <td>{{i.value}}</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div *ngIf="btn == 'todos'">
+                        <div>
+                            <table *ngFor="let i of info | keyvalue">
+                                <tr>
+                                    <td>{{i.key}} </td>
+                                </tr>
+                                <tr>
+                                    <td>{{i.value}}</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
 </div>

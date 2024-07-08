@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiscomponentRoutingModule } from './apiscomponent-routing.module';
 import { ApiscomponentComponent } from './apiscomponent.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,8 @@ import { ApiscomponentComponent } from './apiscomponent.component';
   imports: [
     CommonModule,
     ApiscomponentRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class ApiscomponentModule { }
