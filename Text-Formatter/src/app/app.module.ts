@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // import { RemoveSpecialCharPipe } from './Pipes/remove-special-char.pipe';
 import { UserformModule } from './modules/userform/userform.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +15,8 @@ import { UserformModule } from './modules/userform/userform.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserformModule
+    UserformModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

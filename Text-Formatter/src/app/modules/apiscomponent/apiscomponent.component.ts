@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ApidataService} from './services/apidata.service'
 @Component({
   selector: 'app-apiscomponent',
   templateUrl: './apiscomponent.component.html',
@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiscomponentComponent implements OnInit {
 
-  constructor() { }
+  info : any ;
+  constructor(private data : ApidataService) {
+    this.data.getData().subscribe((apiInfo)=>{
+      this.info = apiInfo
+      console.log(this.info)
+    })
+   }
 
   ngOnInit(): void {
   }

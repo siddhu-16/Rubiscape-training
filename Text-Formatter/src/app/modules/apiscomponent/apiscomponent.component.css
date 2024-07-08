@@ -1,0 +1,63 @@
+.row{
+    margin: 2%;
+    display: flex;
+    background-color: rgb(202, 198, 198);
+}
+
+.border{
+    border: 1px solid black;
+}
+
+.left{
+    width: 70%;
+}
+
+.right{
+    width: 30%;
+}
+.input{
+    width: 50%;
+    margin-left: 2%;
+    padding: 1%;
+}
+.user-input{
+    margin: 20px;
+}
+.btn-grid{
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.btn-g{
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+}
+.btn{
+    margin: 5px;
+    width: 50%;
+    padding: 1%;
+    border: 2px solid black rounded;
+}
+.btn-1{
+    margin: 5px;
+    width: 50%;
+    padding: 1%;
+    background-color: rgb(84, 81, 81);
+    color: white;
+}
+.error{
+    border-radius: 10px;
+    margin:2%;
+    padding: 1%;
+    background-color: white;
+    display: flex;
+}
+.responce{
+    border-radius: 10px;
+    margin:2%;
+    padding: 1%;
+    background-color: white;
+    display: flex;
+    min-height: 40vh;
+}
