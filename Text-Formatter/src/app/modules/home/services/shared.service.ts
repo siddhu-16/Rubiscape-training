@@ -11,6 +11,7 @@ export class SharedService {
   constructor() { }
 
   setInputData(data: string) {
+
     this.inputData = data;
     this.inputDataChanged.emit(this.inputData);
     
