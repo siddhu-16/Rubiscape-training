@@ -40,17 +40,17 @@ export class UserformComponent implements OnInit {
     this.cookieService.set('signup', JSON.stringify(existingForms));
     console.log(`Form Data: ${JSON.stringify(existingForms)}`);
     
-    // Clear the form fields
+    
     this.signup.reset();
     
-    // Update stored forms
+
     this.getAllStoredForms();
   }
 
   getAllStoredForms(): void {
     const storedFormsString = this.cookieService.get('signup');
     this.storedForms = storedFormsString ? JSON.parse(storedFormsString) : [];
-    console.log(this.storedForms); // Print all stored forms to the console
+     
   }
 
   portNumberValidator(control: FormControl): { [key: string]: any } | null {
