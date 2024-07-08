@@ -23,7 +23,7 @@ export class UserformComponent implements OnInit {
       dbname : new FormControl('',[Validators.required,Validators.pattern(/^[a-zA-Z0-9]+$/)]),
       portnumber : new FormControl('',[Validators.required,Validators.pattern(/^\d{1,5}$/)]),
       dbpassword : new FormControl('',[Validators.required,Validators.minLength(7)]),
-      dburl : new FormControl('',[Validators.required,Validators.pattern(/^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/)])
+      dburl : new FormControl('',[Validators.required,Validators.pattern(/^(https?:\/\/.*[^\/])$/)])
     })
   }
   ngOnInit(): void {

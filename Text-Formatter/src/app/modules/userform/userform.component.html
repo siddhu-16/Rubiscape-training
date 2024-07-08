@@ -11,7 +11,7 @@
               Database Name is required.
             </div>
             <div class="text-danger" *ngIf="signup.get('dbname')?.errors?.['pattern']">
-              Special characters are not allowed.
+              Special characters are not allowed. 
             </div>
           </div>
           <div class="three">
@@ -41,26 +41,28 @@
               URL is required.
             </div>
             <div class="text-danger" *ngIf="signup.get('dburl')?.errors?.['pattern']">
-              URL must be start from http: or https:.
+              Invalid URL.
             </div>
           </div>
           <div class="four">
             <button type="reset" class="btn">Cancel</button>
-            <button type="submit" class="btn" [disabled]="">Submit</button>
+            <button type="submit" class="btn" [disabled]="!signup.valid">Submit</button>
           </div>
         </form>
       </div>
     </div>
   </div>
   
-   <div >
-    <div  class="col-12"><div class="seven">Entries:</div></div>
-    <div class="six" class="five" >
-      <div class="eight" *ngFor="let form of storedForms" class="stored-form">
-        <div >
+   <div class="container">
+    
+    <div class="six">
+      <div class="eight">
+        <div class="seven">Entries:</div>
+        <div  *ngFor="let form of storedForms" class="stored-form" >
           <p><strong>Database Name:</strong> {{ form.dbname }}</p>
           <p><strong>Port Number:</strong> {{ form.portnumber }}</p>
           <p><strong>Database URL:</strong> {{ form.dburl }}</p>
+          <hr>
         </div>
       </div>
     </div>
