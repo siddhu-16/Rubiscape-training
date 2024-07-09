@@ -3,8 +3,10 @@
         <div class="col right">
              <div class="user-input">
                 <label for="user">User id:-</label>
-                <input [(ngModel)] = "id" class="input" type="text" placeholder="" (input)="setId()">
-                <!-- <textarea [(ngModel)] = "id" class="form-control" id="floatingInput" (input)="setId()" placeholder="Type Text:-"></textarea> -->
+                <input [(ngModel)] = "id" class="input" type="text" placeholder="" (input)="setId()" required />
+                    <div class="danger" *ngIf="!id">
+                        <span>Id should not be empty</span>
+                    </div>
 
              </div>
              <div class="btn-grid">
@@ -25,60 +27,65 @@
         </div>
         <div class="col left">
             <div>
+
                 <div class="error">
-                    Error Msg
+                    
+                    <span> Error Msg : {{error}}</span>   
                 </div>
                 <div class="responce">
                     Responce Data:
                     <div *ngIf="btn == 'comments'">
-                        <div>
-                            <table *ngFor="let i of info | keyvalue">
-                                <tr>
-                                    <td>{{i.key}} </td>
-                                </tr>
-                                <tr>
-                                    <td>{{i.value}}</td>
-                                </tr>
-                            </table>
+                        <div class="d-con" *ngFor="let i of info | keyvalue">
+                            <div class="right-1">
+                                {{i.key}} :
+                            </div>
+                
+                            <div class="left-1">
+                                {{i.value}}
+                            </div>
                         </div>
-
+                       
                     </div>
                     <div *ngIf="btn == 'albums'">
-                        <div>
-                            <table *ngFor="let i of info | keyvalue">
-                                <tr>
-                                    <td>{{i.key}} </td>
-                                </tr>
-                                <tr>
-                                    <td>{{i.value}}</td>
-                                </tr>
-                            </table>
+                        <div class="d-con" *ngFor="let i of info | keyvalue">
+                            <div class="right-1">
+                                {{i.key}} :
+                            </div>
+                            
+                            <div class="left-1">
+                                {{i.value}}
+                            </div>
                         </div>
 
                     </div>
                     <div *ngIf="btn == 'photos'">
-                        <div>
-                            <table *ngFor="let i of info | keyvalue">
-                                <tr>
-                                    <td>{{i.key}} </td>
-                                </tr>
-                                <tr>
-                                    <td>{{i.value}}</td>
-                                </tr>
-                            </table>
+                        <div class="d-con" *ngFor="let i of info | keyvalue">
+                            
+                                <div class="right-1" >
+                                    {{i.key}} :
+                                </div>
+                                
+                                <div class="left-1" *ngIf="i.key == 'url'">
+                                   <img src="{{i.value}}" alt=""> 
+                                </div>
+                                <div class="left-1" *ngIf="i.key != 'url'">
+                                   {{i.value}}
+                                </div>
+
+                           
+
                         </div>
 
                     </div>
                     <div *ngIf="btn == 'todos'">
-                        <div>
-                            <table *ngFor="let i of info | keyvalue">
-                                <tr>
-                                    <td>{{i.key}} </td>
-                                </tr>
-                                <tr>
-                                    <td>{{i.value}}</td>
-                                </tr>
-                            </table>
+                        <div class="d-con" *ngFor="let i of info | keyvalue">
+                            <div class="right-1">
+                                {{i.key}} :
+                            </div>
+                            
+                            <div class="left-1">
+                                {{i.value}}
+                            </div>
                         </div>
 
                     </div>

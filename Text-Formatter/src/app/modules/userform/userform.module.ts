@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { UserformRoutingModule } from './userform-routing.module';
 import { UserformComponent } from './userform.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,7 @@ import { CookieService } from 'ngx-cookie-service';
   imports: [
     CommonModule,
     UserformRoutingModule,
-    ReactiveFormsModule   
+    ReactiveFormsModule,
   ]
 })
 export class UserformModule { }

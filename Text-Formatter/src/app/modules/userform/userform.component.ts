@@ -43,7 +43,7 @@ export class UserformComponent implements OnInit {
 
     const existingFormsString = this.cookieService.get('signup');
 
-    const existingForms =  JSON.parse(existingFormsString) ;
+    const existingForms = existingFormsString ? JSON.parse(existingFormsString) :[] ;
 
     existingForms.push(formValues);
 
@@ -63,7 +63,7 @@ export class UserformComponent implements OnInit {
 
     const storedFormsString = this.cookieService.get('signup');
 
-    this.storedForms =  JSON.parse(storedFormsString) ;
+    this.storedForms = storedFormsString ? JSON.parse(storedFormsString) :[];
      
   }
 
