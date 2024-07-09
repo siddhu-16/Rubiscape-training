@@ -6,6 +6,7 @@ import { EventEmitter } from '@angular/core';
 export class SharedService {
 
   private inputData: string = '';
+
   inputDataChanged: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
@@ -16,6 +17,5 @@ export class SharedService {
     this.inputDataChanged.emit(this.inputData);
     
   }
-
 
 }

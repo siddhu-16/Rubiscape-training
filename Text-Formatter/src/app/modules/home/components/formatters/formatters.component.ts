@@ -20,7 +20,9 @@ export class FormattersComponent implements OnInit {
   @Output() updateDataEvent = new EventEmitter<any>();
 
   ngOnInit(): void {
+
     this.sharedService.inputDataChanged.subscribe(data =>{
+      
       this.text1 = data;
       this.charCount = data.length;
       this.wordCount = data.trim().split(" ").filter(word => word.length >0).length;

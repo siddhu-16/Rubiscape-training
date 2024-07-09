@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="row">
+        <div class="col right">
+             <div class="user-input">
+                <label for="user">User id:-</label>
+                <input #userid = "ngModel" [(ngModel)] = "id" class="input" type="text" placeholder="" (input)="setId()" required />
+                    <div class="danger" *ngIf="!id && (userid.dirty || userid.touched)">
+                        <span>Id should not be empty</span>
+                    </div>
+
+             </div>
+             <div class="btn-grid">
+                <button id="comments" class="btn" (click)="setbtn($event)" >Comments</button>
+                <button id="albums" class="btn" (click)="setbtn($event)">Albums</button>
+                <button id="photos" class="btn" (click)="setbtn($event)">Photos</button>
+                <button id="todos" class="btn" (click)="setbtn($event)">Todos</button>
+             </div>
+             <div class="btn-g">
+                <button id="delete" class="btn-1" (click)="setMethod($event)">Delete</button>
+                <button id="update" class="btn-1" (click)="setMethod($event)">Update</button>
+                <button id="create" class="btn-1" (click)="setMethod($event)">Create</button>
+             </div>
+             <div class="user-input">
+                <label for="input">Input Body:-</label>
+                <input [(ngModel)] = "body" class="input" type="text" placeholder="" (input)="setBody()">
+             </div>
+        </div>
+        <div class="col left">
+            <div>
+
+                <div class="error">
+                    
+                    <span> Error Msg : {{error}}</span>   
+                </div>
+                <div class="responce">
+                    Responce Data:
+                    <div *ngIf="method">
+                        <div class="d-con" *ngFor="let i of info | keyvalue">
+                            <div class="right-1">
+                                {{i.key}} :
+                            </div>
+                
+                            <div class="left-1">
+                                {{i.value}}
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="btn == 'comments'">
+                        <div class="d-con" *ngFor="let i of info | keyvalue">
+                            <div class="right-1">
+                                {{i.key}} :
+                            </div>
+                
+                            <div class="left-1">
+                                {{i.value}}
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="btn == 'albums'">
+                        <div class="d-con" *ngFor="let i of info | keyvalue">
+                            <div class="right-1">
+                                {{i.key}} :
+                            </div>
+                            
+                            <div class="left-1">
+                                {{i.value}}
+                            </div>
+                        </div>
+
+                    </div>
+                    <div *ngIf="btn == 'photos'">
+                        <div class="d-con" *ngFor="let i of info | keyvalue">
+                            
+                                <div class="right-1" >
+                                    {{i.key}} :
+                                </div>
+                                
+                                <div class="left-1" *ngIf="i.key == 'url'">
+                                   <img src="{{i.value}}" alt=""> 
+                                   
+                                </div>
+                                <div class="left-1" *ngIf="i.key != 'url'">
+                                   {{i.value}}
+                                </div>
+
+                           
+
+                        </div>
+
+                    </div>
+                    <div *ngIf="btn == 'todos'">
+                        <div class="d-con" *ngFor="let i of info | keyvalue">
+                            <div class="right-1">
+                                {{i.key}} :
+                            </div>
+                            
+                            <div class="left-1">
+                                {{i.value}}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
