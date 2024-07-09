@@ -21,6 +21,7 @@ export class ApiscomponentComponent implements OnInit {
   setMethod(event: any) {
 
     this.method = event.target.id;
+    
     console.log(this.method);
     if(this.method ==='delete'){
       this.onDeleteData();
@@ -40,18 +41,29 @@ export class ApiscomponentComponent implements OnInit {
   }
   onDeleteData() {
     
-    this.data.deleteData().subscribe()
-    this.error = "Data Deleted..!"
+    this.data.deleteData().subscribe((apiData)=>{
+      this.info = apiData;
+      
+
+    })
+    
   }
   onCreateData(){
     
-    this.data.postData().subscribe()
-    this.error = "Data Created..!"
+    this.data.postData().subscribe((apiData)=>{
+      
+      this.info = apiData;
+      console.log(this.info)
+     
+    })
+    
   }
   onUpdateData(){
     
-    this.data.updateData().subscribe()
-    this.error = "Data Updated..!"
+    this.data.updateData().subscribe((apiData)=>{
+      this.info = apiData;
+    })
+    
   }
   
   setBody(){
