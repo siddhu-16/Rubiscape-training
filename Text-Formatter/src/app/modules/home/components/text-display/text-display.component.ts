@@ -33,8 +33,6 @@ export class TextDisplayComponent implements OnChanges {
 
   }
 
-
-
   updateId(id:any){
     
     switch (id) {

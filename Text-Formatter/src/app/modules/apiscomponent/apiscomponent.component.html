@@ -16,13 +16,13 @@
                 <button id="todos" class="btn" (click)="setbtn($event)">Todos</button>
              </div>
              <div class="btn-g">
-                <button class="btn-1">Delete</button>
-                <button class="btn-1">Update</button>
-                <button class="btn-1">Create</button>
+                <button id="delete" class="btn-1" (click)="setMethod($event)">Delete</button>
+                <button id="update" class="btn-1" (click)="setMethod($event)">Update</button>
+                <button id="create" class="btn-1" (click)="setMethod($event)">Create</button>
              </div>
              <div class="user-input">
                 <label for="input">Input Body:-</label>
-                <input class="input" type="text" placeholder="">
+                <input [(ngModel)] = "body" class="input" type="text" placeholder="" (input)="setBody()">
              </div>
         </div>
         <div class="col left">

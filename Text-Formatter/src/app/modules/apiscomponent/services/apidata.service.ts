@@ -10,14 +10,17 @@ export class ApidataService {
 
   endpoint = '';
   id = '';
-
+  body = ''
   constructor(private http : HttpClient) { }
 
+  input_body = {}
 
   setId(id :any){
-    
     this.id = id;
     console.log(this.id)
+  }
+  setBody(body : any){
+    this.body = body;
   }
   
   setEndpoint(endpoint:any){
@@ -26,5 +29,24 @@ export class ApidataService {
   }
   getData() {
     return this.http.get<any>(`${this.baseurl}/${this.endpoint}/${this.id}`)
+  }
+  deleteData(){
+    return this.http.delete<any>(`${this.baseurl}/comments/${this.id}`)
+  }
+  updateData(){
+    this.input_body = {
+      
+      'body' : this.body 
+    }
+    return this.http.put<any>(`${this.baseurl}/comments/${this.id}`,this.input_body)
+  }
+
+  postData(){
+    this.input_body = {
+      'id' : this.id,
+      'body' : this.body 
+    }
+   
+    return this.http.post<any>(`${this.baseurl}/comments/`,this.input_body)
   }
 }
