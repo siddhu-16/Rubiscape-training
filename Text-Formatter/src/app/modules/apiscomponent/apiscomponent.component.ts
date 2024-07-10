@@ -33,7 +33,6 @@ export class ApiscomponentComponent implements OnInit {
       return;
     }
     if(this.method === 'update'){
-      
       this.onUpdateData();
       return;
     }
