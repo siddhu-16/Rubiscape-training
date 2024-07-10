@@ -34,41 +34,9 @@
                 </div>
                 <div class="responce">
                     Responce Data:
-                    <div *ngIf="method">
-                        <div class="d-con" *ngFor="let i of info | keyvalue">
-                            <div class="right-1">
-                                {{i.key}} :
-                            </div>
-                
-                            <div class="left-1">
-                                {{i.value}}
-                            </div>
-                        </div>
-                    </div>
-                    <div *ngIf="btn == 'comments'">
-                        <div class="d-con" *ngFor="let i of info | keyvalue">
-                            <div class="right-1">
-                                {{i.key}} :
-                            </div>
-                
-                            <div class="left-1">
-                                {{i.value}}
-                            </div>
-                        </div>
-                    </div>
-                    <div *ngIf="btn == 'albums'">
-                        <div class="d-con" *ngFor="let i of info | keyvalue">
-                            <div class="right-1">
-                                {{i.key}} :
-                            </div>
-                            
-                            <div class="left-1">
-                                {{i.value}}
-                            </div>
-                        </div>
-
-                    </div>
-                    <div *ngIf="btn == 'photos'">
+                    
+                    <div *ngIf="info">
+                        
                         <div class="d-con" *ngFor="let i of info | keyvalue">
                             
                                 <div class="right-1" >
@@ -88,7 +56,8 @@
                         </div>
 
                     </div>
-                    <div *ngIf="btn == 'todos'">
+                    <!-- <div *ngIf="btn == 'todos'">
+                        
                         <div class="d-con" *ngFor="let i of info | keyvalue">
                             <div class="right-1">
                                 {{i.key}} :
@@ -99,7 +68,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
