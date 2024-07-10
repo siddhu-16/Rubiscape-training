@@ -46,7 +46,7 @@ export class ApiscomponentComponent implements OnInit {
       
 
     })
-    
+    this.info = {}
   }
   onCreateData(){
     
@@ -56,14 +56,14 @@ export class ApiscomponentComponent implements OnInit {
       console.log(this.info)
      
     })
-    
+    this.info = {}
   }
   onUpdateData(){
     
     this.data.updateData().subscribe((apiData)=>{
       this.info = apiData;
     })
-    
+    this.info = {}
   }
   
   setBody(){

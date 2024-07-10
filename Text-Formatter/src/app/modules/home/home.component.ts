@@ -12,7 +12,9 @@ export class HomeComponent implements OnInit {
   constructor() { }
   
   updateData(btn_id:any){
+
     this.btn_clicked = btn_id;
+    // console.log(this.btn_clicked)
   }
   
   ngOnInit(): void {

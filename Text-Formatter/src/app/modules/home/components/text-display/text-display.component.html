@@ -1,11 +1,11 @@
 <div class="text-display ">
     <div class="form-floating">
         <!-- <input type="text" [(ngModel)] = "text1" class="form-control" id="floatingInput" (input)="onChange()" placeholder="Type Text:-"> -->
-        <textarea [(ngModel)] = "text1" class="form-control" id="floatingInput" (input)="onChange()" placeholder="Type Text:-"></textarea>
+        <textarea [(ngModel)] = "text1" class="form-control" id="floatingInput" (input)=" onChange()" placeholder="Type Text:-"></textarea>
     </div>
     <div class="display">
         
-        <div class="remove-style" [ngStyle]="currentStyles">
+        <div [ngStyle]="currentStyles">
             {{text2}}
            
         </div>

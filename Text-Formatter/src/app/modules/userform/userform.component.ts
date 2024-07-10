@@ -9,17 +9,14 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class UserformComponent implements OnInit {
 
-  database_name : string = "";
-  port_number : number = 0;
-  database_password : string = "";
-  database_url : string = "";
 
-  signup : FormGroup;
+
+  validate : FormGroup;
   storedForms: any[] = [];
 
-  constructor(private formBuilder : FormBuilder,private cookieService: CookieService){
+  constructor(private formBuilder : FormBuilder, private cookieService: CookieService){
 
-    this.signup = this.formBuilder.group({
+    this.validate = this.formBuilder.group({
 
       dbname : new FormControl('',[Validators.required,Validators.pattern(/^[a-zA-Z0-9]+$/)]),
       portnumber : new FormControl('',[Validators.required,Validators.pattern(/^\d{1,5}$/)]),
@@ -32,33 +29,52 @@ export class UserformComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.signup.reset();
-
-    this.getAllStoredForms();
+    this.validate.reset();
+    this.getRestoredData();
 
   }
 
   onSubmit(): void {
     
-    const formValues = this.signup.value;
+    const Currentvalues = this.validate.value;
+    debugger
+    let existingForms = [];
 
-    const existingFormsString = this.cookieService.get('signup');
+    const existingData = this.cookieService.get('Data');
+    debugger
+    if(existingData){
 
-    const existingForms = existingFormsString ? JSON.parse(existingFormsString) :[] ;
-    existingForms.push(formValues);
-    this.cookieService.set('signup', JSON.stringify(existingForms));
-    console.log(`Form Data: ${JSON.stringify(existingForms)}`);
-    this.signup.reset();
-    this.getAllStoredForms();
+      try{
+        
+        existingForms =  JSON.parse(existingData)  ;
+      }
+      catch(e){
+        console.log(e)
+      }
+    }
+    
+    existingForms.push(Currentvalues);
+    debugger
+    this.cookieService.set('Data', JSON.stringify(existingForms));
+    
+    this.validate.reset();
+    this.getRestoredData();
 
   }
 
-  getAllStoredForms(): void {
+  getRestoredData(): void {
 
-    const storedFormsString = this.cookieService.get('signup');
-
-    this.storedForms = storedFormsString ? JSON.parse(storedFormsString) :[];
-     
+    const storedFormsString = this.cookieService.get('Data');
+    debugger
+    if(storedFormsString){
+      try{
+        
+        this.storedForms =  JSON.parse(storedFormsString) ;  ;
+      }
+      catch(e){
+        console.log(e)
+      }
+    }
   }
 
 
