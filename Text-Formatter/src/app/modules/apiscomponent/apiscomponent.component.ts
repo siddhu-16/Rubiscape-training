@@ -28,7 +28,7 @@ export class ApiscomponentComponent implements OnInit {
       return;
     }
     if(this.method === 'create'){
-      
+      debugger
       this.onCreateData();
       return;
     }

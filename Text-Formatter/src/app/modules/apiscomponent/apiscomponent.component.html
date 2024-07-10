@@ -34,7 +34,8 @@
                 </div>
                 <div class="responce">
                     Responce Data:
-                    <div *ngIf="method">
+                    <!-- <div *ngIf="method">
+                        22
                         <div class="d-con" *ngFor="let i of info | keyvalue">
                             <div class="right-1">
                                 {{i.key}} :
@@ -46,6 +47,7 @@
                         </div>
                     </div>
                     <div *ngIf="btn == 'comments'">
+                        33
                         <div class="d-con" *ngFor="let i of info | keyvalue">
                             <div class="right-1">
                                 {{i.key}} :
@@ -67,8 +69,9 @@
                             </div>
                         </div>
 
-                    </div>
-                    <div *ngIf="btn == 'photos'">
+                    </div> -->
+                    <div *ngIf="info">
+                        
                         <div class="d-con" *ngFor="let i of info | keyvalue">
                             
                                 <div class="right-1" >
@@ -88,7 +91,8 @@
                         </div>
 
                     </div>
-                    <div *ngIf="btn == 'todos'">
+                    <!-- <div *ngIf="btn == 'todos'">
+                        
                         <div class="d-con" *ngFor="let i of info | keyvalue">
                             <div class="right-1">
                                 {{i.key}} :
@@ -99,7 +103,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

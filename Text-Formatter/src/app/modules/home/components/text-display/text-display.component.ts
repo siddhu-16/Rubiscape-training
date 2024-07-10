@@ -33,7 +33,7 @@ export class TextDisplayComponent implements OnChanges {
 
       let btnValue = ''
 
-      if(this.isObject){
+      if(!changes['item'].isFirstChange()){
 
         let fieldValues = JSON.parse(JSON.stringify(this.item))
         let keys = Object.keys(fieldValues)
