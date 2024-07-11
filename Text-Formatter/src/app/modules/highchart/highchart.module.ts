@@ -5,7 +5,6 @@ import { HighchartRoutingModule } from './highchart-routing.module';
 import { HighchartComponent } from './highchart.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 
-
 @NgModule({
   declarations: [
     HighchartComponent
@@ -14,8 +13,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     CommonModule,
     HighchartRoutingModule,
     HighchartsChartModule,
-    FormsModule,
-    
+    FormsModule
+
   ]
 })
 export class HighchartModule { 
