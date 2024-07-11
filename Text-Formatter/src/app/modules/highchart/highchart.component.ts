@@ -28,7 +28,7 @@ export class HighchartComponent implements OnInit {
               text: 'Egg Yolk Composition'
           },
           tooltip: {
-              valueSuffix: '%'
+              valueSuffix: 'percentage'
           },
           
           plotOptions: {
@@ -82,6 +82,7 @@ export class HighchartComponent implements OnInit {
               }
           ] as any
       });
+
         break;
       case 'column':
         Highcharts.chart('container',{
@@ -89,36 +90,35 @@ export class HighchartComponent implements OnInit {
             type: 'column'
         },
         title: {
-            text: 'Corn vs wheat estimated production for 2023',
-            align: 'left'
+            text: 'Accidnt rates in various states',
+            align: 'center'
         },
-        subtitle: {
-            text:
-                'Source: <a target="_blank" ' +
-                'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
-            align: 'left'
-        },
+        
         xAxis: {
-          categories: ['USA', 'China', 'Brazil', 'EU', 'Argentina', 'India'],
+          categories: ['2022', '2023', '2024'],
           crosshair: true,
-          accessibility: {
-              description: 'Countries'
-          }
+          // accessibility: {
+          //     description: 'Countries'
+          // }
         },
         yAxis: {
             min: 0,
             title: {
-                text: '1000 metric tons (MT)'
+                text: 'Number of accidents per year'
             }
         },
         series: [
           {
-              name: 'Corn',
-              data: [387749, 280000, 129000, 64300, 54000, 34300]
+              name: 'Maharastra',
+              data: [750, 680, 476]
           },
           {
-              name: 'Wheat',
-              data: [45321, 140000, 10000, 140500, 19500, 113500]
+              name: 'Goa',
+              data: [580, 660, 876]
+          },
+          {
+              name: 'UP',
+              data: [798, 673, 387]
           }
       ] as any
         })
@@ -173,17 +173,54 @@ export class HighchartComponent implements OnInit {
         
         })
         break;
+
       case 'tree':
-        Highcharts.chart('container',{
-          series: [
-            {
-              type: 'line',
-              data: this.data
-            },
-          ],
-        })
+
+    Highcharts.chart('container', {
+        
+        series: [{
+
+            type: 'treemap',
+            layoutAlgorithm: 'squarified',
+          
+            data: [{
+                name: 'A',
+                value: 6,
+                
+            }, {
+                name: 'B',
+                value: 6,
+                
+            }, {
+                name: 'C',
+                value: 4,
+                
+            }, {
+                name: 'D',
+                value: 3,
+                
+            }, {
+                name: 'E',
+                value: 2,
+                
+            }, {
+                name: 'F',
+                value: 2,
+                
+            }, {
+                name: 'G',
+                value: 1,
+                
+            }]
+        }],
+        title: {
+            text: 'Treemap'
+        }
+    });
         break;
+
       case 'area':
+
         Highcharts.chart('container',{
           series: [
             {
