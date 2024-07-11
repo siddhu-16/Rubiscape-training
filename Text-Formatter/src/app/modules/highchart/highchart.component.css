@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    height: 90vh;
+}
+.left{
+    background-color: rgb(202, 198, 198);
+    width: 20%;
+    margin: 20px;
+}
+.right{
+    background-color: rgb(202, 198, 198);
+    width: 80%;
+    margin: 20px;
+}
+.list{
+    background-color: white;
+    margin: 20px;
+    
+}
+.options{
+    list-style-type: none;
+    
+    padding: 20px;
+}
+.option{
+    margin: 20px;
+}
+.link-list{
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.heading{
+
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+    text-align: center;
+}
+.chartDisplay{
+    background-color: white;
+    width: 95%;
+    height: 90%;
+    margin: 20px;
+}

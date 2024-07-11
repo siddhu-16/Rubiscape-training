@@ -15,7 +15,6 @@ export class FormattersComponent implements OnInit {
 
 passData = {
   btn_value: '',
-  btn_state : false
 }
  
 
@@ -56,7 +55,7 @@ passData = {
 
       this.passData = {
         btn_value : event.target.id,
-        btn_state : false
+        
       }
       this.btn = event.target.id;
       

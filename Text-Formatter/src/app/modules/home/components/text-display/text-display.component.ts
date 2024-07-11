@@ -41,11 +41,10 @@ export class TextDisplayComponent implements OnChanges {
         btnValue = this.values[0]
 
       }
-      
-      this.isObject = true
+    
 
       this.updateId(btnValue);
-      console.log(btnValue)
+      
      
     }
     
