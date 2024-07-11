@@ -1,0 +1,30 @@
+
+<div class="container">
+    <div class="left">
+        <div class="list">
+            <div class="heading">Select Chart</div>
+            <ul class="options">
+                <li class="option"><a class ="link-list" type="btn" (click)="displayCharts('pie')">Pie Charts</a></li>
+                <li class="option"><a class ="link-list" type="btn" (click)="displayCharts('column')">Column Chart</a></li>
+                <li class="option"><a class ="link-list" type="btn" (click)="displayCharts('line')">Line Chart</a></li>
+                <li class="option"><a class ="link-list" type="btn" (click)="displayCharts('tree')">TreeMap Chart</a></li>
+                <li class="option"><a class ="link-list" type="btn" (click)="displayCharts('area')">Area Chart</a></li>
+                <li class="option"><a class ="link-list" type="btn" (click)="displayCharts('stacked')">StackedBar Chart</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right">
+
+        <div class="chartDisplay" >
+            <div id="container" ></div>
+            <div class="chartDisplay" *ngIf="show==false">No Chart selected </div>
+        </div>
+       
+            
+        
+            
+        </div>
+    
+
+    </div>
+
