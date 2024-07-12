@@ -11,13 +11,11 @@ TreemapModule(Highcharts);
 })
 export class HighchartComponent implements OnInit {
 
-  initialMsg : any
+ 
    show = false
-  options : any;
-  data = [10,20,30,40,50];
+ 
 
-  Highcharts: typeof Highcharts = Highcharts;
-
+  
   displayCharts(btn: string) {
     this.show = true
     switch (btn) {
