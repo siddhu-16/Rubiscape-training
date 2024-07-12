@@ -250,8 +250,10 @@ export class HighchartComponent implements OnInit {
                   style: {
                       fontSize: '1.2em',
                       textOutline: 'none',
-                      opacity: 0.7
+                      opacity: 0.,
+                     
                   },
+                  
                   // filter: {
                   //     operator: '>',
                   //     property: 'percentage',
