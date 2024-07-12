@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as go from 'gojs';
-import { color } from 'highcharts';
 
 const $ = go.GraphObject.make
 
@@ -11,16 +10,16 @@ const $ = go.GraphObject.make
 })
 export class GojsComponent implements OnInit {
 
-
-  
-
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
-
+    
 
   }
   ngAfterViewInit(){
+    
     var myDigram = $(go.Diagram , "gojs");
     var nodeData = [
       {text:"Rubiscape", key:"A" ,color:'red',textcolor: "white", textstyle:'bold 14pt calibiri'},
@@ -67,6 +66,7 @@ export class GojsComponent implements OnInit {
         $(go.Shape, {strokeWidth:2},
           new go.Binding('stroke', 'color'),
           new go.Binding('strokeWidth', 'width'),
+          new go.Binding('curve', 'curve')
         ),
         $(go.Shape, {toArrow: 'Standard', stroke: null},
           new go.Binding('fill' ,'color'),
