@@ -30,9 +30,11 @@ export class ApidataService {
   getData() {
     return this.http.get<any>(`${this.baseurl}/${this.endpoint}/${this.id}`)
   }
+
   deleteData(){
     return this.http.delete<any>(`${this.baseurl}/comments/${this.id}`)
   }
+  
   updateData(){
     this.input_body = {
       

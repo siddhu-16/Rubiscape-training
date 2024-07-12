@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'removeSpecialChar'
+  name: 'removeSpecialChar',
+  pure : false
 })
 export class RemoveSpecialCharPipe implements PipeTransform {
 
