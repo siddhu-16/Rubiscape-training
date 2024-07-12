@@ -34,16 +34,17 @@ export class GojsComponent implements OnInit {
       {text:"reusable code", key:"I" ,color:'white',textcolor: "black", nodeshape:"Diamond",swidth:1, textstyle:' 14pt calibiri'},
     ];
     var linkData = [
-      {from: "A",to: "B", color:"#ff00ff", widhth:3},
+      {from: "A",to: "B", color:"#ff00ff", widhth:3,},
       {from: "A",to: "C" , color:"#ff00ff", widhth:3},
       {from: "A",to: "D" , color:"#ff00ff", widhth:3},
-      {from: "C",to: "E" , color:"red", widhth:2,arrow:''},
+      {from: "C",to: "E" , color:"red", widhth:2},
       {from: "C",to: "F" , color:"red", widhth:2},
       {from: "D",to: "G" , color:"blue", widhth:2},
       {from: "F",to: "I" , color:"black", widhth:1},
   
 
     ];
+    
     myDigram.model = new go.GraphLinksModel(nodeData, linkData);
 
     myDigram.nodeTemplate = $(go.Node, 'Auto',
