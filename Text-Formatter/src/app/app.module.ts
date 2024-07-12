@@ -6,6 +6,7 @@ import { UserformModule } from './modules/userform/userform.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiscomponentModule } from './modules/apiscomponent/apiscomponent.module';
 import { HighchartModule } from './modules/highchart/highchart.module';
+import { GojsModule } from './modules/gojs/gojs.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HighchartModule } from './modules/highchart/highchart.module';
     AppRoutingModule,
     UserformModule,
     HttpClientModule,
-    HighchartModule
+    HighchartModule,
+    GojsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
