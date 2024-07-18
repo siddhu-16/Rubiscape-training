@@ -5,12 +5,15 @@
     </div>
     <div class="display">
         
-        <div [ngStyle]="currentStyles">
-            {{text2}}
-           
+        <div [ngStyle]="currentStyles" *ngIf="isRemove ;else elseBlock">
+            {{text2 | remvepipe}}
         </div>
-     
-
+        <ng-template #elseBlock>
+            <div [ngStyle]="currentStyles" >
+                {{text2 }}
+            </div>
+        </ng-template>
+        
     </div>
 
 

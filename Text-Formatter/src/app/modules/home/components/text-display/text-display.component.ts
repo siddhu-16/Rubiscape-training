@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnChanges, OnInit, Renderer2, SimpleChanges } from '@angular/core';
 import { SharedService } from '../../services/shared.service';
 import { Input } from '@angular/core';
+import { RemvepipePipe } from '../../remvepipe.pipe';
 
 @Component({
   selector: 'app-text-display',
@@ -21,6 +22,7 @@ export class TextDisplayComponent implements OnChanges {
   isItalic = false
   isUnderline = false
   isObject = false
+  isRemove = false
   
   constructor(private sharedService : SharedService ) { }
 
@@ -55,6 +57,7 @@ export class TextDisplayComponent implements OnChanges {
 
       this.text2 = this.text1;
       this.sharedService.setInputData(this.text1);
+      this.isRemove = false
   }
 
   updateId(id:any){
@@ -72,11 +75,11 @@ export class TextDisplayComponent implements OnChanges {
         this.text2 = this.text2.split('').reverse().join('');
         break;
       case 'removeSpclChar':
-        this.text2 = this.text2.replace(/[^a-zA-Z0-9 ]/g, '');
+        // this.text2 = this.text2.replace(/[^a-zA-Z0-9 ]/g, '');
+        this.isRemove = true
         break;
       case 'removeStyle':
         this.currentStyles = {};
-
         break;
       case 'capital':
         this.text2 = this.text2.toUpperCase();
