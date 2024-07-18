@@ -40,6 +40,7 @@ export class GojsComponent implements OnInit {
       {from: "C",to: "F" , color:"red", widhth:2},
       {from: "D",to: "G" , color:"blue", widhth:2},
       {from: "F",to: "I" , color:"black", widhth:1},
+      {from: "E",to: "H" , color:"black", widhth:1},
   
 
     ];
