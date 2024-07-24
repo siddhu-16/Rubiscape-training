@@ -60,7 +60,8 @@ export class HighchartComponent implements OnInit {
   showColumn(){
     Highcharts.chart('container',{
       chart: {
-        type: 'column'
+        type: 'column',
+        
     },
     title: {
         text: 'Accidnt rates in various states',
@@ -70,15 +71,25 @@ export class HighchartComponent implements OnInit {
     xAxis: {
       categories: ['2022', '2023', '2024'],
       crosshair: true,
-      // accessibility: {
-      //     description: 'Countries'
-      // }
+      accessibility: {
+          description: 'Countries'
+      }
     },
     yAxis: {
         min: 0,
         title: {
-            text: 'Number of accidents per year'
+            text: 'Number of accidents per year',
+            
         }
+    },
+    plotOptions: {
+      column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        },
+      series:{
+        showInLegend: false,
+      }
     },
     series: [
       {
@@ -96,6 +107,7 @@ export class HighchartComponent implements OnInit {
   ] as any
     })
   }
+
   showLine(){
     Highcharts.chart('container',{
       title:{
@@ -111,10 +123,7 @@ export class HighchartComponent implements OnInit {
         title:{
           text: 'years'
         }
-        // },
-        // accessibility:{
-        //   rangeDescription :'Range:2016 to 2020'
-        // }
+
       },
       legend: {
         layout: 'vertical',
@@ -122,9 +131,14 @@ export class HighchartComponent implements OnInit {
         verticalAlign: 'middle'
       },
       plotOptions: {
+        line:{
+          dataLabels:{
+            enabled: true
+          }
+        },
         series: {
             label: {
-                connectorAllowed: true
+                connectorAllowed: true,
             },
             pointStart: 2010
         }
@@ -158,11 +172,13 @@ export class HighchartComponent implements OnInit {
           accessibility: {
             rangeDescription: 'Range: 2000 to 2024.'
           },
-          categories: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024']
+          categories: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+          
         },
         yAxis: {
           title: {
-            text: 'Revenue (in millions)'
+            text: 'Revenue (in millions)',
+            align: 'high'
           }
         },
         tooltip: {
@@ -205,7 +221,9 @@ export class HighchartComponent implements OnInit {
       chart: {
         type: 'treemap'
       },
-
+      plotOptions:{
+      
+      },
       series: [{
         type: 'treemap',
         layoutAlgorithm: 'sliceAndDice',
@@ -217,7 +235,10 @@ export class HighchartComponent implements OnInit {
           { name: 'Elderberries', value: 2 },
           { name: 'Grapes', value: 4 },
           { name: 'Almonds', value: 1 }
-        ]
+        ],
+        dataLabels:{
+          enabled: true
+        }
       }],
       title: {
         text: 'Treemap'
@@ -228,35 +249,32 @@ export class HighchartComponent implements OnInit {
   showPie(){
     Highcharts.chart('container', {
       chart: {
-          type: 'pie'
+          type: 'pie',
+          backgroundColor:'#f2f2f2'
       },
       title: {
           text: 'Students Interest in Egineering'
       },
       tooltip: {
-          valueSuffix: 'percentage'
+          valueSuffix: '%'
       },
       
       plotOptions: {
           series: {
               allowPointSelect: true,
+              showInLegend: true,
               cursor: 'pointer',
               dataLabels: [ {
                   enabled: true,
                   distance: -40,
-                  format: '{point.percentage:.1f}%',
+                  format: '<b>{point.name}:</b> {point.percentage:.1f}  ',
                   style: {
                       fontSize: '1.2em',
                       textOutline: 'none',
-                      opacity: 0.,
-                     
+                      opacity: 0.1,
                   },
                   
-                  // filter: {
-                  //     operator: '>',
-                  //     property: 'percentage',
-                  //     value: 10
-                  // }
+                 
               }]
           } as any
       },

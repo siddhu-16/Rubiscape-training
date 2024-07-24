@@ -11,13 +11,14 @@ export class ApidataService {
   endpoint = '';
   id = '';
   body = ''
+  
   constructor(private http : HttpClient) { }
 
   input_body = {}
 
   setId(id :any){
     this.id = id;
-    console.log(this.id)
+    
   }
   setBody(body : any){
     this.body = body;
@@ -25,8 +26,9 @@ export class ApidataService {
   
   setEndpoint(endpoint:any){
     this.endpoint = endpoint;
-    console.log(this.endpoint)
+    
   }
+
   getData() {
     return this.http.get<any>(`${this.baseurl}/${this.endpoint}/${this.id}`)
   }
